@@ -10915,12 +10915,11 @@ a.text-dark:focus {
   width: 50px;
 }
 .section-one{
-  height: 100vh;
-  background: url('/img/light.jpg');
+  background: linear-gradient(to right, #cc5333, #23074d);
 }
 .intro-section h2{
   font-family: 'Rubik Mono One', sans-serif;
 }
-nav{
-   
+.intro-section{
+  color: #fff;
 }
