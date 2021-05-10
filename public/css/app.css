@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@900&display=swap');
 
 /* @charset "UTF-8"; */
 
@@ -10918,7 +10918,7 @@ a.text-dark:focus {
   background: linear-gradient(to right, #cc5333, #320a6e);
 }
 .intro-section h2{
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
 }
 .intro-section{
   color: #fff;
@@ -10931,4 +10931,27 @@ ul li{
 }
 .list{
   font-size: 18px;
+}
+.header{
+  font-family: 'Darker Grotesque', sans-serif;
+}
+#btn-text{
+  font-family: 'Darker Grotesque', sans-serif;
+}
+@media screen and (max-width: 600px){
+  .intro-section{
+    text-align: center;
+    
+  }
+  .section-one{
+    padding: 0px;
+    margin: 0;
+  }
+  .section-two .container .row{
+    padding: 0px;
+    margin: 0;
+  }
+  .about-me{
+    text-align: center;
+  }
 }
