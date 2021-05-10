@@ -10917,15 +10917,18 @@ a.text-dark:focus {
 .section-one{
   background: linear-gradient(to right, #cc5333, #320a6e);
 }
+#particles-js{ 
+  background: linear-gradient(to right, #cc5333, #320a6e); 
+}
 .intro-section h2{
   font-family: 'Darker Grotesque', sans-serif;
 }
 .intro-section{
   color: #fff;
 }
-.section-two{
+/* .section-two{
  
-}
+} */
 ul li{
   list-style-type: none;
 }

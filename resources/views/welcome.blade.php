@@ -20,10 +20,15 @@
 
         <!--icofont-->
         <link rel="stylesheet" href="{{asset('icofont/icofont/icofont.min.css')}}">
+        
+        <!--link-->
+        <script type="text/javascript" src="{{asset('app.js')}}"></script>
+        <script type="text/javascript" src="{{asset('particles.js')}}"></script>
+
     </head>
     <body class="antialiased">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container" >
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <img class="nav-logo" src="{{asset('img/my-logo.jpg')}}" alt="Emeka Iloba Timothy">
                 </a>
@@ -87,7 +92,7 @@
                 </div>
             </div>
         </nav>
-        <div class="section-one">
+        <div class="section-one" id="particles-js">
            <div class="container">
                <div class="row p-5">
                     <div class="col-md-5">
