@@ -89,7 +89,7 @@
         </nav>
         <div class="section-one">
            <div class="container">
-               <div class="row">
+               <div class="row p-3">
                     <div class="col-md-5">
                         <div class="image-section p-5">
                             <img class="img-fluid" src="{{asset('img/image.png')}}" alt="Emeka Iloba Timothy">
@@ -98,8 +98,8 @@
                     <div class="col-md-7 mt-5">
                         <div class="intro-section p-5">
                             <h3 class="mb-2">Hi I'm Timothy, Emeka Iloba</h3>
-                            <h2 class="mb-2"> <i class="icofont-rounded-right text-danger"></i>Software Developer</h2>
-                            <h2 class="mb-2"> <i class="icofont-rounded-right text-danger"></i>Graphics Designer</h2>
+                            <h2 class="mb-3"> <i class="icofont-rounded-right text-danger"></i>Software Developer</h2>
+                            <h2 class="mb-4"> <i class="icofont-rounded-right text-danger"></i>Graphics Designer</h2>
                             <div class="button-section mt-3">
                                 <a class="btn btn-danger  btn-lg" href="">See Previous Projects <i class="icofont-rounded-right"></i></a>
                             </div>
