@@ -101,10 +101,17 @@
                             <h2 class="mb-3"> <i class="icofont-rounded-right text-light"></i>Full Stack Developer</h2>
                             <h2 class="mb-4"> <i class="icofont-rounded-right text-light"></i>Graphics Designer</h2>
                             <div class="button-section mt-3">
-                                <a class="btn btn-outline-light  btn-lg" href="">See Previous Projects <i class="icofont-rounded-right"></i></a>
+                                <a class="btn btn-outline-light btn-lg" href="">See Previous Projects <i class="icofont-rounded-right"></i></a>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-ui-file"></i></a>
+                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-facebook"></i></a>
+                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-instagram"></i></a>
+                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-twitter"></i></a>
+                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-linkedin"></i></a>
                             </div>
                         </div>
-                        
+                       
                     </div>
                </div>
            </div>
