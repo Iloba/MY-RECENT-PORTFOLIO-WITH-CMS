@@ -92,8 +92,8 @@
                 </div>
             </div>
         </nav>
-        <div class="section-one" id="particles-js">
-           <div class="container">
+        <div id="particles-js" class="section-one" >
+           <div class="container" >
                <div class="row p-5">
                     <div class="col-md-5">
                         <div class="image-section p-5">
