@@ -117,11 +117,12 @@
            </div>
         </div>
         <div class="section-two p-5">
-            <div class="container">
+            <div class="container ">
                 <h1 class="text-center mt-2">About me</h1>
-               <div class="row">
+               <div class="row p-2">
                     <div class="col-md-6">
                         <div class="about-me">
+                            <h2 class="mt-4">How it all began</h2>
                             <p>I started my Development Journey at 
                                 Age 15 After a long Tussle with Passion and my Strong Desire for Software Development.
                             </p>
@@ -129,23 +130,24 @@
                                 I am a Pasionate Full Stack Developer Who Believes in Self 
                                 Improvement and Impact Making. I love New Challenges and Problem Solving.
                             </p>
-                            <h1 class="mt-4">Top Expertise</h1>
-                            <div class="jumbotron ">
+                            <h2 class="mt-4">Top Expertise</h2>
+                            <div class="jumbotron shadow-sm">
                                 <div class="list d-flex justify-content-center p-2">
                                     <div class="list-one m-3">
                                         <ul>
-                                            <li> <i class="icofont-facebook"></i> HTML/CSS</li>
-                                            <li>Bootstrap</li>
-                                            <li>JavaScript</li>
-                                            <li>Vue</li>
+                                            <li> <i class="icofont-check"></i> HTML/CSS</li>
+                                            <li> <i class="icofont-check"></i> Bootstrap</li>
+                                            <li> <i class="icofont-check"></i> JavaScript</li>
+                                            <li> <i class="icofont-check"></i> Vue</li>
+                                            <li> <i class="icofont-check"></i> Wordpress</li>
                                         </ul>
                                     </div>
                                     <div class="list-two m-3">
                                         <ul>
-                                            <li>HTML/CSS</li>
-                                            <li>Bootstrap</li>
-                                            <li>JavaScript</li>
-                                            <li>Vue</li>
+                                            <li> <i class="icofont-check"></i> PHP </li>
+                                            <li> <i class="icofont-check"></i> MySQL </li>
+                                            <li> <i class="icofont-check"></i> Laravel </li>
+                                            <li> <i class="icofont-check"></i> Cloud Computing</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -159,6 +161,9 @@
                     </div>
                </div>
             </div>
+        </div>
+        <div class="section-three">
+
         </div>
     </body>
 </html>
