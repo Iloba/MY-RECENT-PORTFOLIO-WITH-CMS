@@ -10915,11 +10915,20 @@ a.text-dark:focus {
   width: 50px;
 }
 .section-one{
-  background: linear-gradient(to right, #cc5333, #23074d);
+  background: linear-gradient(to right, #cc5333, #320a6e);
 }
 .intro-section h2{
   font-family: 'Rubik Mono One', sans-serif;
 }
 .intro-section{
   color: #fff;
+}
+.section-two{
+ 
+}
+ul li{
+  list-style-type: none;
+}
+.list{
+  font-size: 18px;
 }

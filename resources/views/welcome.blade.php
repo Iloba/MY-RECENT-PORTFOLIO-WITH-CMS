@@ -116,5 +116,49 @@
                </div>
            </div>
         </div>
+        <div class="section-two p-5">
+            <div class="container">
+                <h1 class="text-center mt-2">About me</h1>
+               <div class="row">
+                    <div class="col-md-6">
+                        <div class="about-me">
+                            <p>I started my Development Journey at 
+                                Age 15 After a long Tussle with Passion and my Strong Desire for Software Development.
+                            </p>
+                            <p>
+                                I am a Pasionate Full Stack Developer Who Believes in Self 
+                                Improvement and Impact Making. I love New Challenges and Problem Solving.
+                            </p>
+                            <h1 class="mt-4">Top Expertise</h1>
+                            <div class="jumbotron ">
+                                <div class="list d-flex justify-content-center p-2">
+                                    <div class="list-one m-3">
+                                        <ul>
+                                            <li> <i class="icofont-facebook"></i> HTML/CSS</li>
+                                            <li>Bootstrap</li>
+                                            <li>JavaScript</li>
+                                            <li>Vue</li>
+                                        </ul>
+                                    </div>
+                                    <div class="list-two m-3">
+                                        <ul>
+                                            <li>HTML/CSS</li>
+                                            <li>Bootstrap</li>
+                                            <li>JavaScript</li>
+                                            <li>Vue</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="tech-image">
+                            <img class="img-fluid" src="{{asset('img/tech.jpg')}}" alt="Emeka Timothy Iloba">
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
     </body>
 </html>
