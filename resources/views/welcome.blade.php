@@ -92,7 +92,7 @@
                 </div>
             </div>
         </nav>
-        <div id="particles-js" class="section-one" >
+        <div id="particles-js">
            <div class="container" >
                <div class="row p-5">
                     <div class="col-md-5">
@@ -168,7 +168,27 @@
             </div>
         </div>
         <div class="section-three">
-
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga a molestiae ducimus, consequuntur illum ab quibusdam esse numquam quia nihil corporis vel tenetur provident exercitationem inventore consequatur ullam atque excepturi.
         </div>
+        <footer class="p-5 bg-light shadow">
+            <div class="container">
+                <div class="row">
+                   <div class="col-md-12">
+                        <div>
+                            <p class="text-center text-secondary">&copy; @php
+                                echo date('Y');
+                            @endphp Emeka Timothy Iloba</p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                                <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-ui-file"></i></a>
+                                <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-facebook"></i></a>
+                            <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-instagram"></i></a>
+                            <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-twitter"></i></a>
+                            <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-linkedin"></i></a>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
