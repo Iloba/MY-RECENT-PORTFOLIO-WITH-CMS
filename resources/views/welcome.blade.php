@@ -25,6 +25,9 @@
         <script type="text/javascript" src="{{asset('app.js')}}"></script>
         <script type="text/javascript" src="{{asset('particles.js')}}"></script>
 
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
     </head>
     <body class="antialiased">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -42,15 +45,15 @@
                          <!-- Authentication Links -->
                          @guest
                          @if (Route::has('login'))
-                             <li class="nav-item">
+                             {{-- <li class="nav-item">
                                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                             </li>
+                             </li> --}}
                          @endif
                          
                          @if (Route::has('register'))
-                             <li class="nav-item">
+                             {{-- <li class="nav-item">
                                  <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                             </li>
+                             </li> --}}
                          @endif
                      @else
                          <li class="nav-item dropdown">
@@ -248,6 +251,11 @@
                             <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-instagram"></i></a>
                             <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-twitter"></i></a>
                             <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-linkedin"></i></a>
+                        </div>
+                        <div>
+                            
+                                <a class="nav-link text-center" href="{{ route('login') }}">{{ __('Login') }}</a>
+                           
                         </div>
                    </div>
                 </div>
