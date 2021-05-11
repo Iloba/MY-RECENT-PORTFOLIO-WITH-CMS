@@ -10958,3 +10958,17 @@ ul li{
     text-align: center;
   }
 }
+.form-container{
+  padding: 30px;
+  background: #fff;
+}
+.section-three{
+  background-color: #fff;
+  padding: 30px;
+}
+.bg-cover {
+  background-attachment: static;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

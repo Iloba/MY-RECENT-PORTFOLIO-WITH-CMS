@@ -167,8 +167,71 @@
                </div>
             </div>
         </div>
-        <div class="section-three">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga a molestiae ducimus, consequuntur illum ab quibusdam esse numquam quia nihil corporis vel tenetur provident exercitationem inventore consequatur ullam atque excepturi.
+        <div class="section-three shadow-sm">
+          <div class="container">
+              <h1 class="text-center header mb-3">Previous Projects</h1>
+                <div class="row">
+                    <div class="col-md-4">
+                          <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://placeimg.com/1000/480/nature)">
+                            <div class="container">
+                                <h1 class="display-4">Hello, world!</h1>
+                                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                                <hr class="my-4">
+                                <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://placeimg.com/1000/480/nature)">
+                          <div class="container">
+                              <h1 class="display-4">Hello, world!</h1>
+                              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                              <hr class="my-4">
+                              <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://placeimg.com/1000/480/nature)">
+                      <div class="container">
+                          <h1 class="display-4">Hello, world!</h1>
+                          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                          <hr class="my-4">
+                          <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
+                      </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+        </div>
+        <div class="section-four p-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="form-container shadow-sm">
+                            <h1 class="header mb-4 text-center text-secondary">Feel Free to Contact Me</h1>
+                            <form action="" method="POST">
+                                  <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text bg-secondary text-light" id="basic-addon1"><i class="icofont-user"></i></span>
+                                    </div>
+                                    <input name="fullname" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+                                  </div>
+                                  
+                                  <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text bg-secondary text-light" id="basic-addon1"><i class="icofont-email"></i></span>
+                                    </div>
+                                    <input name="email" type="text" class="form-control" placeholder="Email or Phone" aria-label="Username" aria-describedby="basic-addon1" required>
+                                  </div>
+
+                                  <textarea name="message" id="" cols="30" class="form-control" rows="10" placeholder="Enter Message" required></textarea> <br>
+                                  <button type="submit" class="btn btn-secondary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="p-5 bg-light shadow">
             <div class="container">
