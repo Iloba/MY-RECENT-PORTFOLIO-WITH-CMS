@@ -26,7 +26,7 @@
         <script type="text/javascript" src="{{asset('particles.js')}}"></script>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     </head>
     <body class="antialiased">
@@ -80,16 +80,16 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="">About</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Projects</a>
+                            <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="">Resume</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Contact</a>
+                            <a class="nav-link" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -124,7 +124,7 @@
                </div>
            </div>
         </div>
-        <div class="section-two p-5">
+        <div id="about" class="section-two p-5">
             <div class="container ">
                 <h1 class="text-center mt-2 header">About me</h1>
                <div class="row p-2">
@@ -170,7 +170,7 @@
                </div>
             </div>
         </div>
-        <div class="section-three shadow-sm">
+        <div id="projects" class="section-three shadow-sm">
           <div class="container">
               <h1 class="text-center header mb-3">Previous Projects</h1>
                 <div class="row">
@@ -207,7 +207,7 @@
                 </div>
           </div>
         </div>
-        <div class="section-four p-5">
+        <div id="contact" class="section-four p-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
@@ -253,9 +253,7 @@
                             <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-linkedin"></i></a>
                         </div>
                         <div>
-                            
-                                <a class="nav-link text-center" href="{{ route('login') }}">{{ __('Login') }}</a>
-                           
+                            <a class="nav-link text-center" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </div>
                    </div>
                 </div>

@@ -28,7 +28,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        // return Posts Page
+        return view('posts.create');
     }
 
     /**
@@ -39,7 +40,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validate
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required | mimes:jpg',
+            'about' => 'required'
+        ]);
+        
+        //Upload Image
+
+
+
+
+        //Store
+        return $request->all();
     }
 
     /**
