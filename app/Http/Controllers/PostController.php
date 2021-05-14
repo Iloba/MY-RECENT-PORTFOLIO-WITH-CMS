@@ -18,7 +18,11 @@ class PostController extends Controller
 
     public function index()
     {
-        //
+
+        $posts = Post::all();
+
+        //return all posts
+        return view('posts.index')->with(['posts' => $posts]);
     }
 
     /**
@@ -46,14 +50,50 @@ class PostController extends Controller
             'image' => 'required | mimes:jpg',
             'about' => 'required'
         ]);
-        
+
         //Upload Image
+
+        //if an image is being uploaded
+        if($request->hasFile('image')){
+            
+
+
+        //Get Original Name
+        $originalName = $request->image->getClientOriginalName();
+
+
+        //get Name ALone
+        $filename = pathinfo($originalName, PATHINFO_FILENAME);
+
+
+        //get Extension
+        $extension = pathinfo($originalName, PATHINFO_EXTENSION);
+
+        $nameToStore = $request->title.'_project.'.$extension;
+
+
+        //Store File
+        $request->image->storeAs('images', $nameToStore, 'public');
+            
+        
+        }
 
 
 
 
         //Store
-        return $request->all();
+        $post = new Post;
+        $post->title = $request->title;
+        $post->image = $nameToStore;
+        $post->about = $request->about;
+
+        $post->save();
+
+        if($post->save()){
+            return back()->with('status', 'Post Created Successfully');
+        }else{
+            return back()->with('status', 'Operation Failed');
+        }
     }
 
     /**
@@ -73,9 +113,12 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        //
+
+        $posts = Post::find($id);
+        //edit posts page
+        return view('posts.edit')->with(['post' => $posts]);
     }
 
     /**
@@ -87,7 +130,53 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        //validate
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required | mimes:jpeg,png',
+            'about' => 'required'
+        ]);
+
+        //Upload Image
+
+        //if an image is being uploaded
+        if($request->hasFile('image')){
+            
+
+
+        //Get Original Name
+        $originalName = $request->image->getClientOriginalName();
+
+
+        //get Name ALone
+        $filename = pathinfo($originalName, PATHINFO_FILENAME);
+
+
+        //get Extension
+        $extension = pathinfo($originalName, PATHINFO_EXTENSION);
+
+        $nameToStore = $request->title.'_project.'.$extension;
+
+
+        //Store File
+        $request->image->storeAs('images', $nameToStore, 'public');
+            
+        
+        }
+
+        //Store
+        $post->title = $request->title;
+        $post->image = $nameToStore;
+        $post->about = $request->about;
+
+        $post->save();
+
+        if($post->save()){
+            return redirect(route('posts.index'))->with('status', 'Post Updated Successfully');
+        }else{
+            return back()->with('status', 'Operation Failed');
+        }
+
     }
 
     /**
