@@ -185,8 +185,13 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
-        //
+        //delete
+        $post = Post::find($id);
+
+        $post->delete();
+
+        return back()->with('status', 'Post Deleted Successfully');
     }
 }

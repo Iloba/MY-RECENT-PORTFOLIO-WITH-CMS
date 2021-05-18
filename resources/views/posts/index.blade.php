@@ -45,8 +45,23 @@
                                                 </td>
                                                 <td><a class="btn btn-info text-light" href="{{route('posts.edit', $post->id)}}"><i class="icofont-edit"></i></a></td>
                                                 <td>
-                                                    <a class="btn btn-danger text-light" href=""> <i class="icofont-trash"></i></a>
+                                                    <a 
+
+                                                    onclick="
+                                                    event.preventDefault();
+                                                        if(
+                                                            confirm('Are you Sure you wanna Delete')){
+                                                            document.getElementById('form-delete-{{$post->id}}').submit();
+                                                        }
+                                                    "
+
+                                                    class="btn btn-danger text-light" href="{{route('posts.destroy', $post->id)}}"> <i class="icofont-trash"></i></a>
                                                 </td>
+
+                                                <form style="display: none" id="{{'form-delete-'.$post->id}}"  action="{{route('posts.destroy', $post->id)}}">
+                                                    @csrf
+                                                    @method('delete')
+                                                </form>
                                             </tr>
                                                 
                                             @endforeach
