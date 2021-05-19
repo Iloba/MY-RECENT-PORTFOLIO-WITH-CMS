@@ -53,12 +53,12 @@
                                                             confirm('Are you Sure you wanna Delete')){
                                                             document.getElementById('form-delete-{{$post->id}}').submit();
                                                         }
-                                                    "
+                                                    ";
 
-                                                    class="btn btn-danger text-light" href="{{route('posts.destroy', $post->id)}}"> <i class="icofont-trash"></i></a>
+                                                    class="btn btn-danger text-light" href="{{route('posts.destroy', $post->id.'/delete')}}"> <i class="icofont-trash"></i></a>
                                                 </td>
 
-                                                <form style="display: none" id="{{'form-delete-'.$post->id}}"  action="{{route('posts.destroy', $post->id)}}">
+                                                <form style="display: none" id="{{'form-delete-'.$post->id}}" method="POST" action="{{route('posts.destroy', $post->id)}}">
                                                     @csrf
                                                     @method('delete')
                                                 </form>
