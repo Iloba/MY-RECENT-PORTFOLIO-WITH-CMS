@@ -102,9 +102,12 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        //Show Individual post
+        $post = Post::find($id);
+
+        return view('posts.post-page')->with(['post' => $post]);
     }
 
     /**
@@ -193,5 +196,11 @@ class PostController extends Controller
         $post->delete();
 
         return back()->with('status', 'Post Deleted Successfully');
+    }
+
+    public function welcome(){
+        $posts = Post::all();
+
+        return view('welcome')->with(['posts' => $posts]);
     }
 }

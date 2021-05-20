@@ -178,35 +178,26 @@
           <div class="container">
               <h1 class="text-center header mb-3">Previous Projects</h1>
                 <div class="row">
-                    <div class="col-md-4">
-                          <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://placeimg.com/1000/480/nature)">
-                            <div class="container">
-                                <h1 class="display-4">Hello, world!</h1>
-                                <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                                <hr class="my-4">
-                                <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
+                    
+                        @foreach ($posts as $post)
+                        <div class="col-md-4 mb-3">
+                            <div class="card text-white" >
+                                <div class="card-image">
+                                    <img class="img-fluid img" src="{{asset('storage/images/'.$post->image)}}" alt="Emeka Iloba TImothy">
+                                </div>
+
+                                <div class="card-body p-3">
+                                    <h3 class="text-secondary">{{$post->title}}</h3>
+                                    <p class="text-secondary">{{$post->about}}</p>
+
+                                    <a class="btn btn-secondary btn-lg" href="{{route('posts.show', $post->id)}}" role="button">Learn more</a>
+                                </div>
+                            
                             </div>
-                          </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://placeimg.com/1000/480/nature)">
-                          <div class="container">
-                              <h1 class="display-4">Hello, world!</h1>
-                              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                              <hr class="my-4">
-                              <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
-                          </div>
-                        </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://placeimg.com/1000/480/nature)">
-                      <div class="container">
-                          <h1 class="display-4">Hello, world!</h1>
-                          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-                          <hr class="my-4">
-                          <a class="btn btn-light btn-lg" href="#" role="button">Learn more</a>
-                      </div>
-                    </div>
+                        </div> 
+                        @endforeach
+                         
+                   
               </div>
                 </div>
           </div>

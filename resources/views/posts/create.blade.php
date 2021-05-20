@@ -22,7 +22,7 @@
                             <div class="input-group-prepend">              
                                 <span class="input-group-text bg-info text-light" id="basic-addon1"><i class="icofont-ui-user"></i></span>
                             </div>  
-                            <input type="text" name="title" class="form-control  @error('title')  is-invalid   @enderror" placeholder="Enter Project Title"  aria-label="Title" aria-describedby="basic-addon1" >
+                            <input type="text" name="title" class="form-control  @error('title')  is-invalid   @enderror" placeholder="Enter Project Title"  aria-label="Title" value="{{old('title')}}" aria-describedby="basic-addon1" >
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">              
@@ -30,7 +30,7 @@
                             </div>  
                             <input type="file" name="image" class="form-control  @error('image')  is-invalid   @enderror" placeholder="Select Project Image"  aria-label="Image" aria-describedby="basic-addon1" >
                         </div>
-                        <textarea class="form-control" name="about" id="" cols="30" rows="10" placeholder="About Project"></textarea> <br>
+                        <textarea class="form-control" name="about" id="" cols="30" rows="10" value="{{old('about')}}" placeholder="About Project"></textarea> <br>
                         <button type="submit" class="btn btn-secondary">Add Project</button>
                     </form>
                 </div>
