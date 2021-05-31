@@ -114,13 +114,15 @@
                         <div class="like-section d-flex m-3 bg-light p-2 shadow">
                             
                            <div class="m-2">
-                                <form action="" method="POST">
+                                <form action="{{route('posts.like', $post->id)}}" method="POST">
+                                    @csrf
                                     <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Like</button>
                                 </form>
                            </div>
 
                           <div class="m-2">
                             <form action="" method="POST">
+                                @csrf
                                 <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Unlike</button>
                             </form>
                           </div>
