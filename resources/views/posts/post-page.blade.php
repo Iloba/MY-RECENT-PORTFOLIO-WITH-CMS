@@ -101,7 +101,9 @@
         </nav> <br>
         <div class="container">
             <div class="row justify-content-center">
+               
                 <div class="col-md-8">
+                    @include('layouts.error')
                     <div class="card shadow p-5">
                         <h3 class="mb-3">{{$post->title}}</h3>
                         <div class="">
@@ -114,15 +116,16 @@
                         <div class="like-section d-flex m-3 bg-light p-2 shadow">
                             
                            <div class="m-2">
-                                <form action="{{route('posts.like', $post->id)}}" method="POST">
+                                <form action="{{route('posts.like', $post)}}" method="POST">
                                     @csrf
                                     <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Like</button>
                                 </form>
                            </div>
 
                           <div class="m-2">
-                            <form action="" method="POST">
+                            <form action="{{route('likes.destroy', $post)}}" method="POST">
                                 @csrf
+                                @method('DELETE')
                                 <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Unlike</button>
                             </form>
                           </div>

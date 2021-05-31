@@ -24,7 +24,12 @@ Route::get('/', [PostController::class, 'welcome']);
 
 Route::resource('posts', PostController::class);
 
+
+//Like Post
 Route::post('posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.like');
+
+//Unlike Post
+Route::delete('posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('likes.destroy');
 
 Auth::routes();
 

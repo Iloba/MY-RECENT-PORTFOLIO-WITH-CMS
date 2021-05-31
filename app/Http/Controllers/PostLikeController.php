@@ -13,6 +13,9 @@ class PostLikeController extends Controller
         $this->middleware(['auth']);
     }
 
+
+    //User can only like Post Once
+
     //Store like
     public function store(Request $request,  Post $post){
         // dd($post);
@@ -25,6 +28,14 @@ class PostLikeController extends Controller
         ]);
 
         //Return back
-        return back();
+        return back()->with('status', 'Operation Successful');
+    }
+
+    public function destroy(Request $request, Post $post){
+       
+        //delete Like
+        $request->user()->likes()->where('post_id', $post->id)->delete();
+
+        return back()->with('status', 'Operation Successful');
     }
 }
