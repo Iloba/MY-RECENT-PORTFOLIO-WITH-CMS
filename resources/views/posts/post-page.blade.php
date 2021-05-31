@@ -100,15 +100,45 @@
             </div>
         </nav> <br>
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card shadow p-3">
-                        <h3 class="mb-2">{{$post->title}}</h3>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow p-5">
+                        <h3 class="mb-3">{{$post->title}}</h3>
                         <div class="">
-                            <img class="img-fluid img" src="{{asset('storage/images/'.$post->image)}}" alt="">
+                            <img width="540" height="120" class="img-fluid img" src="{{asset('storage/images/'.$post->image)}}" alt="">
                         </div>
-                        <div>
+                        <div class="pt-4">
                             <p>{{$post->about}}</p>
+                        </div>
+                        <small><i>you can like post below</i></small> <br>
+                        <div class="like-section d-flex m-3 bg-light p-2 shadow">
+                            
+                           <div class="m-2">
+                                <form action="" method="POST">
+                                    <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Like</button>
+                                </form>
+                           </div>
+
+                          <div class="m-2">
+                            <form action="" method="POST">
+                                <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Unlike</button>
+                            </form>
+                          </div>
+
+                          <div class="m-2">
+                                12 Likes
+                          </div>
+                           
+                           
+                        </div> <br>
+                        <div class="comment-section">
+                            <form action="" method="post">
+                                <small><i>you can also comment below</i></small>
+                                @csrf
+                                <input type="text" name="name"  class="form-control" id="" placeholder="Enter Name"> <br>
+                                <textarea name="comment" id="" placeholder="Enter Comment" class="form-control" cols="30" rows="5"></textarea> <br>
+                                <button class="btn btn-info" type="submit"><i class="icofont-location-arrow text-light"></i></button>
+                            </form>
                         </div>
                     </div>
                 </div>
