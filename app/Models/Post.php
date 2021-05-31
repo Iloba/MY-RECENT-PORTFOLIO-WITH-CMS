@@ -12,11 +12,11 @@ class Post extends Model
 
     //likes relationship
     public function likes(){
-        $this->hasMany(Like::class);
+       return $this->hasMany(Like::class);
     }
 
     //Post to user relationship
     public function user(){
-        $this->belongsTo(User::class);
+       return $this->belongsTo(User::class);
     }
 }

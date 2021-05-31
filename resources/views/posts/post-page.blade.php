@@ -128,7 +128,7 @@
                           </div>
 
                           <div class="m-2">
-                                12 Likes
+                            {{  $post->likes->count() }} {{Str::plural('like', $post->likes->count())}}
                           </div>
                            
                            

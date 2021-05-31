@@ -20,8 +20,11 @@ class PostLikeController extends Controller
 
         // dd($post->likes());
         //Create Post
-        $post->user()->likes()->create([
+        $post->likes()->create([
             'user_id' => $request->user()->id,
         ]);
+
+        //Return back
+        return back();
     }
 }
