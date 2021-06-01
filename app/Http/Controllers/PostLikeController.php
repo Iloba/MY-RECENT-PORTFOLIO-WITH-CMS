@@ -14,12 +14,15 @@ class PostLikeController extends Controller
     }
 
 
-    //User can only like Post Once
+ 
 
     //Store like
     public function store(Request $request,  Post $post){
         // dd($post);
-
+   //User can only like Post Once
+   if($post->likedBy($request->user())){
+       return response(null, 409); //conflict HTTP
+   }
 
         // dd($post->likes());
         //Create Post

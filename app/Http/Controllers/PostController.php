@@ -136,7 +136,7 @@ class PostController extends Controller
         //validate
         $request->validate([
             'title' => 'required',
-            'image' => 'required | mimes:jpeg,png',
+            'image' => ' mimes:jpeg,bmp,png | required',
             'about' => 'required'
         ]);
 

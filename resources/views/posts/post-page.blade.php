@@ -114,21 +114,24 @@
                         </div>
                         <small><i>you can like post below</i></small> <br>
                         <div class="like-section d-flex m-3 bg-light p-2 shadow">
-                            
+                            @if(!$post->likedBy(auth()->user()))
                            <div class="m-2">
                                 <form action="{{route('posts.like', $post)}}" method="POST">
                                     @csrf
                                     <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Like</button>
                                 </form>
                            </div>
-
-                          <div class="m-2">
+                           @else
+                           <div class="m-2">
                             <form action="{{route('likes.destroy', $post)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Unlike</button>
                             </form>
                           </div>
+                           @endif
+
+                          
 
                           <div class="m-2">
                             {{  $post->likes->count() }} {{Str::plural('like', $post->likes->count())}}

@@ -118,7 +118,7 @@
                             <div class="d-flex mt-3">
                                 <a class="btn btn-outline-light m-1" href=""><i class="icofont-ui-file"></i></a>
                                 <a class="btn btn-outline-light m-1" href=""><i class="icofont-facebook"></i></a>
-                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-instagram"></i></a>
+                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-github"></i></a>
                                 <a class="btn btn-outline-light m-1" href=""><i class="icofont-twitter"></i></a>
                                 <a class="btn btn-outline-light m-1" href=""><i class="icofont-linkedin"></i></a>
                             </div>
