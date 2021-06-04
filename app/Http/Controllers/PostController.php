@@ -92,7 +92,7 @@ class PostController extends Controller
         if($post->save()){
             return back()->with('status', 'Post Created Successfully');
         }else{
-            return back()->with('status', 'Operation Failed');
+            return redirect('posts.index')->with('status', 'Operation Failed');
         }
     }
 

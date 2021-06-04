@@ -110,12 +110,14 @@
                     <div class="col-md-7 mt-5">
                         <div class="intro-section p-5">
                             <h3 class="mb-2">Hi I'm Timothy, Emeka Iloba</h3>
-                            <h2 class="mb-3"> <i class="icofont-rounded-right text-light"></i>Full Stack Developer</h2>
-                            <h2 class="mb-4"> <i class="icofont-rounded-right text-light"></i>Graphics Designer</h2>
+                            <div class="stack">
+                                <h2 class="mb-3 "> <i class="icofont-rounded-right text-light"></i>Full Stack Developer</h2>
+                                 <h2 class="mb-4 "> <i class="icofont-rounded-right text-light"></i>Graphics Designer</h2>
+                            </div>
                             <div class="button-section mt-3">
                                 <a class="btn btn-outline-light btn-lg" id="btn-text" href="">See Previous Projects <i class="icofont-rounded-right"></i></a>
                             </div>
-                            <div class="d-flex mt-3">
+                            <div class="d-flex mt-3 icons-section">
                                 <a class="btn btn-outline-light m-1" href=""><i class="icofont-ui-file"></i></a>
                                 <a class="btn btn-outline-light m-1" href=""><i class="icofont-facebook"></i></a>
                                 <a class="btn btn-outline-light m-1" href=""><i class="icofont-github"></i></a>

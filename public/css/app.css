@@ -2713,14 +2713,14 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
   color: #fff;
-  background-color: #6c757d;
-  border-color: #6c757d;
+  background-color: #320a6e;
+  border-color: #320a6e;
 }
 
 .btn-secondary:hover {
   color: #fff;
-  background-color: #5a6268;
-  border-color: #545b62;
+  background-color: #20034b;
+  border-color: #20034b;
 }
 
 .btn-secondary:focus,
@@ -10945,6 +10945,9 @@ ul li{
 @media screen and (max-width: 600px){
   .intro-section{
     text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
     
   }
   .section-one{
@@ -10957,6 +10960,15 @@ ul li{
   }
   .about-me{
     text-align: center;
+  }
+  .icons-section{
+    display: none;
+  }
+  .stack{
+    display: block;
+    /* width:550px; */
+    margin: auto;
+    
   }
 }
 .form-container{
