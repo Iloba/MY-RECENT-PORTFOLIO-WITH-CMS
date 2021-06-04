@@ -105,38 +105,48 @@
                 <div class="col-md-8">
                     @include('layouts.error')
                     <div class="card shadow p-5">
-                        <h3 class="mb-3">{{$post->title}}</h3>
+                        <h3 class="mb-3">{{$post->title}} <span class="ml-5 badge badge-success"> 
+                                <div class="m-2">
+                                    {{  $post->likes->count() }} {{Str::plural('like', $post->likes->count())}}
+                                </div>
+                           </span>
+                        </h3> 
                         <div class="">
                             <img width="540" height="120" class="img-fluid img" src="{{asset('storage/images/'.$post->image)}}" alt="">
                         </div>
                         <div class="pt-4">
                             <p>{{$post->about}}</p>
                         </div>
+                        
                         <small><i>you can like post below</i></small> <br>
                         <div class="like-section d-flex m-3 bg-light p-2 shadow">
-                            @if(!$post->likedBy(auth()->user()))
-                           <div class="m-2">
-                                <form action="{{route('posts.like', $post)}}" method="POST">
-                                    @csrf
-                                    <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Like</button>
-                                </form>
-                           </div>
+                            @if(auth()->user())
+                                @if (!$post->likedBy(auth()->user()))
+                                    <div class="m-2">
+                                        <form action="{{route('posts.like', $post)}}" method="POST">
+                                            @csrf
+                                            <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Like</button>
+                                        </form>
+                                    </div>  
+
+                                @else
+                                <div class="m-2">
+                                    <form action="{{route('likes.destroy', $post)}}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Unlike</button>
+                                    </form>
+                                </div>
+
+                                @endif
+                          
                            @else
-                           <div class="m-2">
-                            <form action="{{route('likes.destroy', $post)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button style="border:none; background: rgba(255, 255, 255, 0);" type="submit" class="text-info">Unlike</button>
-                            </form>
-                          </div>
+                            <p>Please login to like post</p>
                            @endif
 
                           
 
-                          <div class="m-2">
-                            {{  $post->likes->count() }} {{Str::plural('like', $post->likes->count())}}
-                          </div>
-                           
+                         
                            
                         </div> <br>
                         <div class="comment-section">

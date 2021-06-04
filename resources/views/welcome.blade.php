@@ -191,7 +191,7 @@
                                 <div class="card-body p-3">
                                     <h3 class="text-secondary">{{$post->title}}</h3>
                                     <p class="text-secondary">{{$post->about}}</p>
-
+                                    
                                     <a class="btn btn-secondary btn-lg" href="{{route('posts.show', $post->id)}}" role="button">Learn more</a>
                                 </div>
                             

@@ -34,6 +34,7 @@ class PostLikeController extends Controller
         return back()->with('status', 'Operation Successful');
     }
 
+    //Unlike Post
     public function destroy(Request $request, Post $post){
        
         //delete Like
