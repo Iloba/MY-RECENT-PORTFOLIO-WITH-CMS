@@ -150,11 +150,12 @@
                            
                         </div> <br>
                         <div class="comment-section">
-                            <form action="" method="post">
+                            <form action="{{route('store.comment', $post)}}" method="POST">
+                                @csrf
                                 <small><i>you can also comment below</i></small>
                                 @csrf
-                                <input type="text" name="name"  class="form-control" id="" placeholder="Enter Name"> <br>
-                                <textarea name="comment" id="" placeholder="Enter Comment" class="form-control" cols="30" rows="5"></textarea> <br>
+                                <input type="text" name="name"  class="form-control" id="" placeholder="Enter Name" value="{{old('name')}}"> <br>
+                                <textarea name="comment" id="" placeholder="Enter Comment" class="form-control" cols="30" rows="5" aria-valuemax="{{old('comment')}}"></textarea> <br>
                                 <button class="btn btn-info" type="submit"><i class="icofont-location-arrow text-light"></i></button>
                             </form>
                         </div>

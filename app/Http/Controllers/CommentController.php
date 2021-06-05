@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 
@@ -33,9 +34,28 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Post $post)
     {
-        //
+
+        //Validate fields
+        $request->validate([
+            'name' => 'required',
+            'comment' => 'required'
+        ]);
+
+
+        //Store Comment
+        $post->comment()->create([
+            'name' => $request->name,
+            'comment' => $request->comment
+        ]);
+
+        //Redirect Back
+        return back();
+
+       
+
+
     }
 
     /**

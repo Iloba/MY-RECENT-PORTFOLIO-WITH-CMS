@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostLikeController;
 
 /*
@@ -23,6 +24,10 @@ use App\Http\Controllers\PostLikeController;
 Route::get('/', [PostController::class, 'welcome']);
 
 Route::resource('posts', PostController::class);
+
+Route::resource('comments', CommentController::class);
+
+Route::post('/comment/{post}', [CommentController::class, 'store'])->name('store.comment');
 
 
 //Like Post
