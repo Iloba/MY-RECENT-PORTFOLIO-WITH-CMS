@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 
@@ -51,7 +52,7 @@ class CommentController extends Controller
         ]);
 
         //Redirect Back
-        return back();
+        return back()->with('status', 'Comment Added Successfully');
 
        
 
