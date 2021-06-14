@@ -121,7 +121,7 @@
                                 <a class="btn btn-outline-light m-1" target="_blank" href="{{asset('DEVELOPER-RESUME.pdf')}}"><i class="icofont-ui-file"></i></a>
                                 <a class="btn btn-outline-light m-1" href="https://web.facebook.com/emeka.iloba.94"><i class="icofont-facebook"></i></a>
                                 <a class="btn btn-outline-light m-1" href="https://github.com/Iloba"><i class="icofont-github"></i></a>
-                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-twitter"></i></a>
+                                <a class="btn btn-outline-light m-1" href="https://twitter.com/EmekaIloba/"><i class="icofont-twitter"></i></a>
                                 <a class="btn btn-outline-light m-1" href="https://www.linkedin.com/in/emeka-iloba-93332318a/"><i class="icofont-linkedin"></i></a>
                             </div>
                         </div>
@@ -246,7 +246,7 @@
                             <a class="btn btn-outline-light m-1" target="_blank" href="{{asset('DEVELOPER-RESUME.pdf')}}"><i class="icofont-ui-file"></i></a>
                             <a class="btn btn-outline-light m-1" href="https://web.facebook.com/emeka.iloba.94"><i class="icofont-facebook"></i></a>
                             <a class="btn btn-outline-light m-1" href="https://github.com/Iloba"><i class="icofont-github"></i></a>
-                            <a class="btn btn-outline-light m-1" href=""><i class="icofont-twitter"></i></a>
+                            <a class="btn btn-outline-light m-1" href="https://twitter.com/EmekaIloba/"><i class="icofont-twitter"></i></a>
                             <a class="btn btn-outline-light m-1" href="https://www.linkedin.com/in/emeka-iloba-93332318a/"><i class="icofont-linkedin"></i></a>
                         </div>
                         <div>
