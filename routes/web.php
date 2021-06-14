@@ -27,8 +27,13 @@ Route::get('/', [PostController::class, 'welcome']);
 Route::resource('posts', PostController::class);
 
 
-//Route for comments
+//Route for comments (Submit comment)
 Route::post('/posts/{post}', [CommentController::class, 'submitComment'])->name('submit_comment');
+
+Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+
+//Route for getting all comments
+Route::get('posts/{post:id}', [CommentController::class, 'getComments'])->name('get_comments');
 
 //Like Post
 Route::post('posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.like');

@@ -15,6 +15,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    @foreach ($comments as $comment)
+                        {{$comment}}
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -160,20 +160,21 @@
                             </form>
                         </div>
                         <div class="display-comments mt-3 shadow">
-                            {{-- @if ($comments->count() > 0)
+                            @if ($comments->count() > 0)
                                 @foreach ($comments as $comment)
-                                    <p>{{$comment}}</p>
+                                    {{-- <p>{{$comment}}</p> --}}
+                                    <div class="m-3">
+                                        <b class="text-info">{{$comment->name}}</b> <small>{{$comment->created_at->diffForHumans()}}</small>
+                                    </div>
+                                    <div class="m-3 text-secondary">
+                                        <a class="text-secondary" href="#"><p>{{$comment->comment}}</p></a>
+                                    </div>
+                                    <div class="m-3">
+                                        <a href="#">reply</a>
+                                    </div>
                                 @endforeach
-                            @endif --}}
-                            <div class="m-3">
-                                <b class="text-info">Emeka Iloba</b>
-                            </div>
-                            <div class="m-3 text-secondary">
-                                <a class="text-secondary" href="#"><p>This is my Comment</p></a>
-                            </div>
-                            <div class="m-3">
-                                <a href="#">reply</a>
-                            </div>
+                            @endif
+                            
                         </div>
                     </div>
                 </div>
