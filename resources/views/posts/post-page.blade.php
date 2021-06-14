@@ -181,7 +181,7 @@
                                     </div>
                                 @endforeach
                                 <div class="m-4">
-                                    {{$comments->links()}}
+                                    {{-- {{$comments->links()}} --}}
                                 </div>
                             @else
                                     <p class="m-3">No Comments</p>
