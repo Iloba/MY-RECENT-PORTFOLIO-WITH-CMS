@@ -153,7 +153,7 @@
                         <div class="comment-section">
                             <form action="{{route('submit_comment', $post)}}" method="POST">
                                 @csrf
-                                <small><i>you can also comment below</i></small>
+                                <h2 class="mb-5">DROP A COMMENT</h2>
                                 @csrf
                                 <input type="text" name="name"  class="form-control" id="" placeholder="Enter Name" value="{{old('name')}}"> <br>
                                 <textarea name="comment" id="" placeholder="Enter Comment" class="form-control" cols="30" rows="5" aria-valuemax="{{old('comment')}}"></textarea> <br>
@@ -161,10 +161,11 @@
                             </form>
                         </div>
                         <div class="display-comments mt-3 shadow">
-                            <div class="card mb-2 p-2 m-2">
-                               <b>All Comments</b>
-                            </div>
+                            
                             @if ($comments->count() > 0)
+                            <div class="card mb-2 p-2 m-2">
+                                <b>All Comments || <span class="text-info">{{$comments->count()}} {{Str::plural('comment'), $comments->count()}}</span></b> 
+                             </div>
                                 @foreach ($comments as $comment)
                                 
                                 {{-- {{$comment->count()}} {{Str::plural('Comment', $comment->count())}} --}}

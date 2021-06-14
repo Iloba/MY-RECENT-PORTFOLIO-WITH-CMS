@@ -90,7 +90,7 @@
                             <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Resume</a>
+                            <a class="nav-link" target="_blank" href="{{asset('DEVELOPER-RESUME.pdf')}}">Resume</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
