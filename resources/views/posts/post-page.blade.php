@@ -150,7 +150,7 @@
                            
                         </div> <br>
                         <div class="comment-section">
-                            <form action="{{route('store.comment', $post)}}" method="POST">
+                            <form action="{{route('submit_comment', $post)}}" method="POST">
                                 @csrf
                                 <small><i>you can also comment below</i></small>
                                 @csrf
@@ -158,6 +158,22 @@
                                 <textarea name="comment" id="" placeholder="Enter Comment" class="form-control" cols="30" rows="5" aria-valuemax="{{old('comment')}}"></textarea> <br>
                                 <button class="btn btn-info" type="submit"><i class="icofont-location-arrow text-light"></i></button>
                             </form>
+                        </div>
+                        <div class="display-comments mt-3 shadow">
+                            {{-- @if ($comments->count() > 0)
+                                @foreach ($comments as $comment)
+                                    <p>{{$comment}}</p>
+                                @endforeach
+                            @endif --}}
+                            <div class="m-3">
+                                <b class="text-info">Emeka Iloba</b>
+                            </div>
+                            <div class="m-3 text-secondary">
+                                <a class="text-secondary" href="#"><p>This is my Comment</p></a>
+                            </div>
+                            <div class="m-3">
+                                <a href="#">reply</a>
+                            </div>
                         </div>
                     </div>
                 </div>

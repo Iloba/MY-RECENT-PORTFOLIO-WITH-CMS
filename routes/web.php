@@ -23,12 +23,12 @@ use App\Http\Controllers\PostLikeController;
 
 Route::get('/', [PostController::class, 'welcome']);
 
+//Route resource for posts
 Route::resource('posts', PostController::class);
 
-Route::resource('comments', CommentController::class);
 
-Route::post('/comment/{post}', [CommentController::class, 'store'])->name('store.comment');
-
+//Route for comments
+Route::post('/posts/{post}', [CommentController::class, 'submitComment'])->name('submit_comment');
 
 //Like Post
 Route::post('posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.like');
