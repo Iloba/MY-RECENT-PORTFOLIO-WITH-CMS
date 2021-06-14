@@ -118,11 +118,11 @@
                                 <a class="btn btn-outline-light btn-lg" id="btn-text" href="">See Previous Projects <i class="icofont-rounded-right"></i></a>
                             </div>
                             <div class="d-flex mt-3 icons-section">
-                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-ui-file"></i></a>
-                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-facebook"></i></a>
-                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-github"></i></a>
+                                <a class="btn btn-outline-light m-1" target="_blank" href="{{asset('DEVELOPER-RESUME.pdf')}}"><i class="icofont-ui-file"></i></a>
+                                <a class="btn btn-outline-light m-1" href="https://web.facebook.com/emeka.iloba.94"><i class="icofont-facebook"></i></a>
+                                <a class="btn btn-outline-light m-1" href="https://github.com/Iloba"><i class="icofont-github"></i></a>
                                 <a class="btn btn-outline-light m-1" href=""><i class="icofont-twitter"></i></a>
-                                <a class="btn btn-outline-light m-1" href=""><i class="icofont-linkedin"></i></a>
+                                <a class="btn btn-outline-light m-1" href="https://www.linkedin.com/in/emeka-iloba-93332318a/"><i class="icofont-linkedin"></i></a>
                             </div>
                         </div>
                        
@@ -243,11 +243,11 @@
                             @endphp Emeka Timothy Iloba</p>
                         </div>
                         <div class="d-flex justify-content-center">
-                                <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-ui-file"></i></a>
-                                <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-facebook"></i></a>
-                            <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-instagram"></i></a>
-                            <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-twitter"></i></a>
-                            <a class="btn btn-outline-secondary m-1" href=""><i class="icofont-linkedin"></i></a>
+                            <a class="btn btn-outline-light m-1" target="_blank" href="{{asset('DEVELOPER-RESUME.pdf')}}"><i class="icofont-ui-file"></i></a>
+                            <a class="btn btn-outline-light m-1" href="https://web.facebook.com/emeka.iloba.94"><i class="icofont-facebook"></i></a>
+                            <a class="btn btn-outline-light m-1" href="https://github.com/Iloba"><i class="icofont-github"></i></a>
+                            <a class="btn btn-outline-light m-1" href=""><i class="icofont-twitter"></i></a>
+                            <a class="btn btn-outline-light m-1" href="https://www.linkedin.com/in/emeka-iloba-93332318a/"><i class="icofont-linkedin"></i></a>
                         </div>
                         <div>
                             <a class="nav-link text-center" href="{{ route('login') }}">{{ __('Login') }}</a>
