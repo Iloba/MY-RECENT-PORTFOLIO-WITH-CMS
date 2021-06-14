@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class CommentController extends Controller
@@ -33,12 +34,22 @@ class CommentController extends Controller
     //Get all comments on a particular post
     public function getComments(Post $post){
         if(Post::where('id', $post->id)){
-            $comments = Post::Find($post->id)->comment()->get();
+            $comments = Post::Find($post->id)->comment()->paginate(5);
           
             return view('posts.post-page',[
                 'comments' => $comments,
                 'post' => $post
             ]);
+        }
+    }
+
+    //Get Single Comment
+    public function getSingleComment(Post $post, $id){
+        if(Post::where('id', $post->id)->exists()){
+            $comment = Post::find($post->id)->comment()->where('id', $id)->get();
+            
+            //Return back
+            return view('comments.comment-page')->with(['comment' => $comment]);
         }
     }
 }

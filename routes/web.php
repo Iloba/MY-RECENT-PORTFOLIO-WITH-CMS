@@ -35,6 +35,9 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 //Route for getting all comments
 Route::get('posts/{post:id}', [CommentController::class, 'getComments'])->name('get_comments');
 
+//Get individial Comment
+Route::get('posts/{post:id}/comments/{id}', [CommentController::class, 'getSingleComment'])->name('comments.show');
+
 //Like Post
 Route::post('posts/{post}/likes', [PostLikeController::class, 'store'])->name('posts.like');
 

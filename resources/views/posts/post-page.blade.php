@@ -170,15 +170,20 @@
                                 {{-- {{$comment->count()}} {{Str::plural('Comment', $comment->count())}} --}}
                                     {{-- <p>{{$comment}}</p> --}}
                                     <div class="m-3">
-                                        <b class="text-info">{{$comment->name}}</b> <small>{{$comment->created_at->diffForHumans()}}</small>
+                                        <b class="text-info">{{$comment->name}}</b> || <small>{{$comment->created_at->diffForHumans()}}</small>
                                     </div>
                                     <div class="m-3 text-secondary">
-                                        <a class="text-secondary" href="#"><p>{{$comment->comment}}</p></a>
+                                        <a class="text-secondary" href="{{route('comments.show', [$post, $comment->id])}}"><p>{{$comment->comment}}</p></a>
                                     </div>
                                     <div class="m-3">
                                         <a href="#">reply</a>
                                     </div>
                                 @endforeach
+                                <div class="m-4">
+                                    {{$comments->links()}}
+                                </div>
+                            @else
+                                    <p class="m-3">No Comments</p>
                             @endif
                             
                         </div>
