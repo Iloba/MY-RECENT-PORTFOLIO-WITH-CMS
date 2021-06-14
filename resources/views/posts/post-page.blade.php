@@ -105,12 +105,13 @@
                 <div class="col-md-8">
                     @include('layouts.error')
                     <div class="card shadow p-5">
-                        <h3 class="mb-3">{{$post->title}} <span class="ml-5 badge badge-success"> 
+                        <h5 class="mb-3">{{$post->title}} <span class="ml-5 badge badge-success"> 
                                 <div class="m-2">
                                     {{  $post->likes->count() }} {{Str::plural('like', $post->likes->count())}}
+                                    
                                 </div>
                            </span>
-                        </h3> 
+                        </h5> 
                         <div class="">
                             <img width="540" height="120" class="img-fluid img" src="{{asset('storage/images/'.$post->image)}}" alt="">
                         </div>
@@ -160,8 +161,13 @@
                             </form>
                         </div>
                         <div class="display-comments mt-3 shadow">
+                            <div class="card mb-2 p-2 m-2">
+                               <b>All Comments</b>
+                            </div>
                             @if ($comments->count() > 0)
                                 @foreach ($comments as $comment)
+                                
+                                {{-- {{$comment->count()}} {{Str::plural('Comment', $comment->count())}} --}}
                                     {{-- <p>{{$comment}}</p> --}}
                                     <div class="m-3">
                                         <b class="text-info">{{$comment->name}}</b> <small>{{$comment->created_at->diffForHumans()}}</small>
